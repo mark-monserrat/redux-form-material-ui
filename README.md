@@ -69,7 +69,7 @@ class MyForm extends Component {
         
         <Field name="eventDate" component={DatePicker} format={null} hintText="What day is the event?"/>
 
-        <Field name="password" component={PasswordField} label="Password" hint="A least 8 characters" />
+        <Field name="password" component={PasswordField} label="Password" hintText="A least 8 characters" />
 
         <Field name="receiveEmails" component={Toggle} label="Please spam me!"/>
 
