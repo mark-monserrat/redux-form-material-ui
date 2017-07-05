@@ -5,6 +5,7 @@ import RadioButtonGroup from './RadioButtonGroup'
 import SelectField from './SelectField'
 import Slider from './Slider'
 import TextField from './TextField'
+import PasswordField from './PasswordField'
 import TimePicker from './TimePicker'
 import Toggle from './Toggle'
 
@@ -17,5 +18,6 @@ export {
   SelectField,
   Slider,
   TextField,
+  PasswordField,
   Toggle
 }
