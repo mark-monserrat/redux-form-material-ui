@@ -13,8 +13,6 @@ wrappers to facilitate the use of
 
 ---
 
-## [Live Demo](http://erikras.github.io/redux-form-material-ui/) :eyes:
-
 ## Installation
 
 Using [npm](https://www.npmjs.org/):
@@ -34,6 +32,7 @@ Using [npm](https://www.npmjs.org/):
 * [Slider](http://www.material-ui.com/#/components/slider)
 * [TextField](http://www.material-ui.com/#/components/text-field)
 * [Toggle](http://www.material-ui.com/#/components/toggle)
+* [PasswordField](https://teamwertarbyte.github.io/material-ui-password-field/?selectedKind=PasswordField&selectedStory=normal%20without%20floating%20label&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-actions%2Factions-panel)
 
 ## Usage
 
@@ -50,7 +49,8 @@ import {
   SelectField,
   TextField,
   Toggle,
-  DatePicker
+  DatePicker,
+  PasswordField
 } from 'redux-form-material-ui'
 
 class MyForm extends Component {
@@ -68,6 +68,8 @@ class MyForm extends Component {
         <Field name="agreeToTerms" component={Checkbox} label="Agree to terms?"/>
         
         <Field name="eventDate" component={DatePicker} format={null} hintText="What day is the event?"/>
+
+        <Field name="password" component={PasswordField} label="Password" hint="A least 8 characters" />
 
         <Field name="receiveEmails" component={Toggle} label="Please spam me!"/>
 
