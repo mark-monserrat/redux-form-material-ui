@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _RadioButton = require('material-ui/RadioButton');
+var _Radio = require('material-ui/Radio');
 
 var _createComponent = require('./createComponent');
 
@@ -29,4 +29,4 @@ var mapValueToValueSelected = function mapValueToValueSelected(_ref, errorProp) 
   }), errorProp);
 };
 
-exports.default = (0, _createComponent2.default)(_RadioButton.RadioButtonGroup, mapValueToValueSelected);
+exports.default = (0, _createComponent2.default)(_Radio.RadioGroup, mapValueToValueSelected);

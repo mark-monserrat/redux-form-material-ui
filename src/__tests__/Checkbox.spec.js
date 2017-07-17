@@ -2,34 +2,33 @@ import expect from 'expect'
 import expectJsx from 'expect-jsx'
 import noop from 'lodash.noop'
 import Checkbox from 'material-ui/Checkbox'
-import getMuiTheme from 'material-ui/styles/getMuiTheme'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
 import React from 'react'
 import TestUtils from 'react-dom/test-utils'
 import ReduxFormMaterialUICheckbox from '../Checkbox'
+
+const theme = createMuiTheme({})
 
 expect.extend(expectJsx)
 
 describe('Checkbox', () => {
   it('has a display name', () => {
     expect(ReduxFormMaterialUICheckbox.displayName).toBe(
-      'ReduxFormMaterialUICheckbox'
+      'ReduxFormMaterialUISwitchBase'
     )
   })
 
   it('renders an unchecked Checkbox', () => {
     expect(
       new ReduxFormMaterialUICheckbox({
-        input: {
-          name: 'myCheckbox',
-          onChange: noop
-        }
+        name: 'myCheckbox',
+        onChange: noop
       }).render()
     ).toEqualJSX(
       <Checkbox
         name="myCheckbox"
         checked={false}
-        onCheck={noop}
+        onChange={noop}
         ref="component"
       />
     )
@@ -38,17 +37,15 @@ describe('Checkbox', () => {
   it('renders a checked Checkbox', () => {
     expect(
       new ReduxFormMaterialUICheckbox({
-        input: {
-          name: 'myCheckbox',
-          onChange: noop,
-          value: true
-        }
+        name: 'myCheckbox',
+        onChange: noop,
+        checked: true
       }).render()
     ).toEqualJSX(
       <Checkbox
         name="myCheckbox"
         checked={true}
-        onCheck={noop}
+        onChange={noop}
         ref="component"
       />
     )
@@ -57,16 +54,13 @@ describe('Checkbox', () => {
   it('should ignore defaultChecked', () => {
     expect(
       new ReduxFormMaterialUICheckbox({
-        input: {
-          name: 'myCheckbox',
-          onChange: noop
-        },
-        defaultChecked: true
+        name: 'myCheckbox',
+        onChange: noop
       }).render()
     ).toEqualJSX(
       <Checkbox
         name="myCheckbox"
-        onCheck={noop}
+        onChange={noop}
         ref="component"
       />
     )
@@ -74,9 +68,10 @@ describe('Checkbox', () => {
 
   it('provides getRenderedComponent', () => {
     const dom = TestUtils.renderIntoDocument(
-      <MuiThemeProvider muiTheme={getMuiTheme()}>
+      <MuiThemeProvider theme={theme}>
         <ReduxFormMaterialUICheckbox
-          input={{ name: 'myCheckbox', onChange: noop }}
+          name="myCheckbox"
+          onChange={noop}
         />
       </MuiThemeProvider>
     )

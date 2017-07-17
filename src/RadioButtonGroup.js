@@ -1,4 +1,4 @@
-import { RadioButtonGroup } from 'material-ui/RadioButton'
+import { RadioGroup } from 'material-ui/Radio'
 import createComponent from './createComponent'
 import mapError from './mapError'
 
@@ -15,4 +15,4 @@ const mapValueToValueSelected = (
   )
 }
 
-export default createComponent(RadioButtonGroup, mapValueToValueSelected)
+export default createComponent(RadioGroup, mapValueToValueSelected)

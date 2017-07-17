@@ -6,9 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _Checkbox = require('material-ui/Checkbox');
-
-var _Checkbox2 = _interopRequireDefault(_Checkbox);
+var _Radio = require('material-ui/Radio');
 
 var _createComponent = require('./createComponent');
 
@@ -18,15 +16,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-exports.default = (0, _createComponent2.default)(_Checkbox2.default, function (_ref) {
+exports.default = (0, _createComponent2.default)(_Radio.LabelRadio, function (_ref) {
   var meta = _ref.meta,
-      _onChange = _ref.onChange,
+      onChange = _ref.onChange,
       defaultChecked = _ref.defaultChecked,
       props = _objectWithoutProperties(_ref, ['meta', 'onChange', 'defaultChecked']);
 
-  return _extends({}, props, {
-    onChange: function onChange(event, isInputChecked) {
-      _onChange(isInputChecked);
-    }
-  });
+  return _extends({}, props);
 });

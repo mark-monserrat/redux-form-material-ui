@@ -6,9 +6,9 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _Toggle = require('material-ui/Toggle');
+var _Switch = require('material-ui/Switch');
 
-var _Toggle2 = _interopRequireDefault(_Toggle);
+var _Switch2 = _interopRequireDefault(_Switch);
 
 var _createComponent = require('./createComponent');
 
@@ -18,17 +18,23 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-exports.default = (0, _createComponent2.default)(_Toggle2.default, function (_ref) {
+exports.default = (0, _createComponent2.default)(_Switch2.default, function (_ref) {
   var _ref$input = _ref.input,
-      onChange = _ref$input.onChange,
+      _onChange = _ref$input.onChange,
       value = _ref$input.value,
       inputProps = _objectWithoutProperties(_ref$input, ['onChange', 'value']),
-      defaultToggled = _ref.defaultToggled,
+      checked = _ref.checked,
       meta = _ref.meta,
-      props = _objectWithoutProperties(_ref, ['input', 'defaultToggled', 'meta']);
+      onChangeFromField = _ref.onChange,
+      props = _objectWithoutProperties(_ref, ['input', 'checked', 'meta', 'onChange']);
 
   return _extends({}, inputProps, props, {
-    onToggle: onChange,
-    toggled: !!value
+    onChange: function onChange(event, value) {
+      _onChange(value);
+      if (onChangeFromField) {
+        onChangeFromField(value);
+      }
+    },
+    checked: !!checked
   });
 });
