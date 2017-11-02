@@ -98,8 +98,5 @@
         "*.js"
       ]
     }
-  ],
-  "dependencies": {
-    "material-ui-password-field": "^1.2.0"
-  }
+  ]
 }
