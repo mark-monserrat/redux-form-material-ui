@@ -12,15 +12,15 @@ var _lodash = require('lodash.noop');
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
-var _getMuiTheme = require('material-ui/styles/getMuiTheme');
+var _createMuiTheme = require('@material-ui/core/styles/createMuiTheme');
 
-var _getMuiTheme2 = _interopRequireDefault(_getMuiTheme);
+var _createMuiTheme2 = _interopRequireDefault(_createMuiTheme);
 
-var _MuiThemeProvider = require('material-ui/styles/MuiThemeProvider');
+var _MuiThemeProvider = require('@material-ui/core/styles/MuiThemeProvider');
 
 var _MuiThemeProvider2 = _interopRequireDefault(_MuiThemeProvider);
 
-var _TimePicker = require('material-ui/TimePicker');
+var _TimePicker = require('@material-ui/core/TimePicker');
 
 var _TimePicker2 = _interopRequireDefault(_TimePicker);
 
@@ -136,7 +136,7 @@ describe('TimePicker', function () {
 
     var dom = _testUtils2.default.renderIntoDocument(_react2.default.createElement(
       _MuiThemeProvider2.default,
-      { muiTheme: (0, _getMuiTheme2.default)() },
+      { muiTheme: (0, _createMuiTheme2.default)() },
       _react2.default.createElement(_TimePicker4.default, {
         input: { name: 'myTimePicker', onChange: onChange, value: first }
       })
@@ -151,7 +151,7 @@ describe('TimePicker', function () {
   it('provides getRenderedComponent', function () {
     var dom = _testUtils2.default.renderIntoDocument(_react2.default.createElement(
       _MuiThemeProvider2.default,
-      { muiTheme: (0, _getMuiTheme2.default)() },
+      { muiTheme: (0, _createMuiTheme2.default)() },
       _react2.default.createElement(_TimePicker4.default, {
         input: { name: 'myTimePicker', onChange: _lodash2.default }
       })

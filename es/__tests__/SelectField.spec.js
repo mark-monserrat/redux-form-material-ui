@@ -12,15 +12,15 @@ var _lodash = require('lodash.noop');
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
-var _SelectField = require('material-ui/SelectField');
+var _SelectField = require('@material-ui/core/SelectField');
 
 var _SelectField2 = _interopRequireDefault(_SelectField);
 
-var _getMuiTheme = require('material-ui/styles/getMuiTheme');
+var _createMuiTheme = require('@material-ui/core/styles/createMuiTheme');
 
-var _getMuiTheme2 = _interopRequireDefault(_getMuiTheme);
+var _createMuiTheme2 = _interopRequireDefault(_createMuiTheme);
 
-var _MuiThemeProvider = require('material-ui/styles/MuiThemeProvider');
+var _MuiThemeProvider = require('@material-ui/core/styles/MuiThemeProvider');
 
 var _MuiThemeProvider2 = _interopRequireDefault(_MuiThemeProvider);
 
@@ -141,7 +141,7 @@ describe('SelectField', function () {
 
     var dom = _testUtils2.default.renderIntoDocument(_react2.default.createElement(
       _MuiThemeProvider2.default,
-      { muiTheme: (0, _getMuiTheme2.default)() },
+      { muiTheme: (0, _createMuiTheme2.default)() },
       _react2.default.createElement(_SelectField4.default, {
         name: 'mySelect',
         input: { onChange: onChange, value: 'Foo' }
@@ -160,7 +160,7 @@ describe('SelectField', function () {
 
     var dom = _testUtils2.default.renderIntoDocument(_react2.default.createElement(
       _MuiThemeProvider2.default,
-      { muiTheme: (0, _getMuiTheme2.default)() },
+      { muiTheme: (0, _createMuiTheme2.default)() },
       _react2.default.createElement(_SelectField4.default, {
         name: 'mySelect',
         input: { onChange: reduxFormOnChange, value: 'Foo' },
@@ -184,7 +184,7 @@ describe('SelectField', function () {
 
     var dom = _testUtils2.default.renderIntoDocument(_react2.default.createElement(
       _MuiThemeProvider2.default,
-      { muiTheme: (0, _getMuiTheme2.default)() },
+      { muiTheme: (0, _createMuiTheme2.default)() },
       _react2.default.createElement(_SelectField4.default, {
         name: 'mySelect',
         input: { value: 'Foo', onBlur: fieldOnBlur }
@@ -203,7 +203,7 @@ describe('SelectField', function () {
   it('provides getRenderedComponent', function () {
     var dom = _testUtils2.default.renderIntoDocument(_react2.default.createElement(
       _MuiThemeProvider2.default,
-      { muiTheme: (0, _getMuiTheme2.default)() },
+      { muiTheme: (0, _createMuiTheme2.default)() },
       _react2.default.createElement(_SelectField4.default, { input: { name: 'mySelect' } })
     ));
 

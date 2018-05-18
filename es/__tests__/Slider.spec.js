@@ -12,15 +12,15 @@ var _lodash = require('lodash.noop');
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
-var _Slider = require('material-ui/Slider');
+var _Slider = require('@material-ui/core/Slider');
 
 var _Slider2 = _interopRequireDefault(_Slider);
 
-var _getMuiTheme = require('material-ui/styles/getMuiTheme');
+var _createMuiTheme = require('@material-ui/core/styles/createMuiTheme');
 
-var _getMuiTheme2 = _interopRequireDefault(_getMuiTheme);
+var _createMuiTheme2 = _interopRequireDefault(_createMuiTheme);
 
-var _MuiThemeProvider = require('material-ui/styles/MuiThemeProvider');
+var _MuiThemeProvider = require('@material-ui/core/styles/MuiThemeProvider');
 
 var _MuiThemeProvider2 = _interopRequireDefault(_MuiThemeProvider);
 
@@ -100,7 +100,7 @@ describe('Slider', function () {
 
     var dom = _testUtils2.default.renderIntoDocument(_react2.default.createElement(
       _MuiThemeProvider2.default,
-      { muiTheme: (0, _getMuiTheme2.default)() },
+      { muiTheme: (0, _createMuiTheme2.default)() },
       _react2.default.createElement(_Slider4.default, {
         name: 'mySlider',
         input: { onChange: onChange, value: 0.5 },
@@ -123,7 +123,7 @@ describe('Slider', function () {
   it('provides getRenderedComponent', function () {
     var dom = _testUtils2.default.renderIntoDocument(_react2.default.createElement(
       _MuiThemeProvider2.default,
-      { muiTheme: (0, _getMuiTheme2.default)() },
+      { muiTheme: (0, _createMuiTheme2.default)() },
       _react2.default.createElement(_Slider4.default, { input: { name: 'mySlider' } })
     ));
 

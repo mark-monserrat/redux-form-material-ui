@@ -8,11 +8,11 @@ var _expectJsx = require('expect-jsx');
 
 var _expectJsx2 = _interopRequireDefault(_expectJsx);
 
-var _getMuiTheme = require('material-ui/styles/getMuiTheme');
+var _createMuiTheme = require('@material-ui/core/styles/createMuiTheme');
 
-var _getMuiTheme2 = _interopRequireDefault(_getMuiTheme);
+var _createMuiTheme2 = _interopRequireDefault(_createMuiTheme);
 
-var _MuiThemeProvider = require('material-ui/styles/MuiThemeProvider');
+var _MuiThemeProvider = require('@material-ui/core/styles/MuiThemeProvider');
 
 var _MuiThemeProvider2 = _interopRequireDefault(_MuiThemeProvider);
 
@@ -132,7 +132,7 @@ describe('PasswordField', function () {
   it('provides getRenderedComponent', function () {
     var dom = _testUtils2.default.renderIntoDocument(_react2.default.createElement(
       _MuiThemeProvider2.default,
-      { muiTheme: (0, _getMuiTheme2.default)() },
+      { muiTheme: (0, _createMuiTheme2.default)() },
       _react2.default.createElement(_PasswordField2.default, { name: 'myPassword' })
     ));
 
